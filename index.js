@@ -8,7 +8,7 @@ client.on('ready', async () => {
     const channel = await client.channels.fetch(process.env.BUMP_CHANNEL)
     
     async function bump() {
-        await channel.sendSlash('302050872383242240', 'bump')
+        await channel.send('302050872383242240', 'bump')
         console.count('Bumped!')
     }
 

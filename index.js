@@ -2,13 +2,16 @@ require('dotenv').config()
 const { Client } = require('discord.js-selfbot-v13')
 const client = new Client()
 
+/* -- Webserver remove this if you dont want -- */
+require('./server')
+
 client.on('ready', async () => {
     console.log(`Logged in as ${client.user.tag}!`)
 
     const channel = await client.channels.fetch(process.env.BUMP_CHANNEL)
     
     async function bump() {
-        await channel.send('m!play')
+        await channel.send('m!collection load 3')
         console.count('Bumped!')
     }
 

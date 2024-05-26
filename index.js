@@ -11,7 +11,7 @@ client.on('ready', async () => {
     const channel = await client.channels.fetch(process.env.BUMP_CHANNEL)
     
     async function bump() {
-        await channel.send('m!collection load 3')
+        await channel.send('m!collection load 4')
         console.count('Bumped!')
     }
 
